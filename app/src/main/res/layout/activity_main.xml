@@ -54,7 +54,7 @@
         android:text="40 secs work"
         android:textAppearance="@android:style/TextAppearance.Material.Display1"
         android:layout_below="@+id/textView7"
-        android:layout_alignStart="@+id/totalTimeTextView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/restTextView"
