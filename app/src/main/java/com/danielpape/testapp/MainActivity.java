@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -14,10 +15,14 @@ import junit.framework.Test;
 public class MainActivity extends AppCompatActivity {
 
     SeekBar timeSlider;
+    SeekBar workRestSlider;
     TextView countdownTextView;
+    Button statusChangeButton;
     int minutes;
     int seconds;
     int restTime;
+    Boolean counterIsActive = false;
+    CountDownTimer countDownTimer;
 
     public void updateTimer(int secondsLeft) {
         minutes = (int)secondsLeft / 60;
@@ -32,34 +37,53 @@ public class MainActivity extends AppCompatActivity {
         countdownTextView.setText(Integer.toString(minutes)+":"+secondString);
     }
 
+    public void resetTimer (){
+        countDownTimer.cancel();
+        counterIsActive = false;
+        timeSlider.setEnabled(true);
+        workRestSlider.setEnabled(true);
+        statusChangeButton.setText("Start EMOM");
+    }
+
     public void controlTimer(View view) {
 
-        new CountDownTimer(timeSlider.getProgress() * 1000+100, 1000) {
+        if(counterIsActive == false) {
+            counterIsActive = true;
+            timeSlider.setEnabled(false);
+            workRestSlider.setEnabled(false);
+            statusChangeButton.setText("Stop");
 
-            @Override
-            public void onTick(long l) {
+            countDownTimer = new CountDownTimer(timeSlider.getProgress() * 1000 + 100, 1000) {
 
-                updateTimer((int)l/1000);
+                @Override
+                public void onTick(long l) {
 
-                if(seconds == 0) {
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.go);
-                    mPlayer.start();
-                }else if (seconds == restTime) {
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rest);
-                    mPlayer.start();
+                    updateTimer((int) l / 1000);
+
+                    if (seconds == 0) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.go);
+                        mPlayer.start();
+                    } else if (seconds == restTime) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rest);
+                        mPlayer.start();
+                    }
+
                 }
 
-            }
+                @Override
+                public void onFinish() {
 
-            @Override
-            public void onFinish() {
+                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.complete);
+                    mPlayer.start();
+                    resetTimer();
 
-                countdownTextView.setText("0:00");
-                MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.complete);
-                mPlayer.start();
+                }
+            }.start();
+        } else {
 
-            }
-        }.start();
+            resetTimer();
+
+        }
 
 
     }
@@ -70,8 +94,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         timeSlider = (SeekBar)findViewById(R.id.timeSlider);
-        SeekBar workRestSlider = (SeekBar)findViewById(R.id.workRestSlider);
+        workRestSlider = (SeekBar)findViewById(R.id.workRestSlider);
         countdownTextView = (TextView)findViewById(R.id.countdownTextView);
+        statusChangeButton = (Button)findViewById(R.id.statusChangeButton);
+
 
         final TextView totalTimeTextView = (TextView)findViewById(R.id.totalTimeTextView);
         final TextView workTextView = (TextView)findViewById(R.id.workTextView);
@@ -79,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
         timeSlider.setMax(1800);
         timeSlider.setProgress(600);
-        workRestSlider.setMax(60);
-        workRestSlider.setProgress(40);
+        workRestSlider.setMax(40);
+        workRestSlider.setProgress(30);
         restTime = 20;
 
         timeSlider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -89,7 +115,14 @@ public class MainActivity extends AppCompatActivity {
 
                 minutes = (int) i / 60;
                 int second = i - minutes * 60;
-                totalTimeTextView.setText(Integer.toString(minutes)+" minutes");
+                if(minutes == 0){
+                    minutes = 1;
+                }
+                if(minutes == 1){
+                    totalTimeTextView.setText(Integer.toString(minutes)+" minute");
+                }else {
+                    totalTimeTextView.setText(Integer.toString(minutes) + " minutes");
+                }
 
 
             }
@@ -110,9 +143,9 @@ public class MainActivity extends AppCompatActivity {
         workRestSlider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                i = i+10;
 
                 restTime = (int) 60 - i;
-
                 workTextView.setText(Integer.toString(i)+" secs work");
                 restTimeTextView.setText(Integer.toString(restTime)+" secs rest");
 
