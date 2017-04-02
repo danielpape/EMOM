@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         counterIsActive = false;
         timeSlider.setEnabled(true);
         workRestSlider.setEnabled(true);
-        statusChangeButton.setText("Start EMOM");
+        statusChangeButton.setText("Start Workout");
         countdownTextView.setText("0:00");
     }
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             counterIsActive = true;
             timeSlider.setEnabled(false);
             workRestSlider.setEnabled(false);
-            statusChangeButton.setText("Stop");
+            statusChangeButton.setText("Stop Workout");
 
             countDownTimer = new CountDownTimer(timeSlider.getProgress() * 1000 + 100, 1000) {
 
@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
+
             }
 
             @Override
@@ -137,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
                 timeSlider.setProgress(minutes*60);
+                countdownTextView.setText(minutes+":00");
 
             }
         });
