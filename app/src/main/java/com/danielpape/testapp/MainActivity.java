@@ -61,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
                     updateTimer((int) l / 1000);
 
-                    if (seconds == 0) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.go);
+                    if (seconds == 3) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdown);
                         mPlayer.start();
-                    } else if (seconds == restTime) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rest);
+                    } else if (seconds == restTime+3) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdown);
                         mPlayer.start();
                     }
 
