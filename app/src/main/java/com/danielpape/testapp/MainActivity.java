@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         timeSlider.setEnabled(true);
         workRestSlider.setEnabled(true);
         statusChangeButton.setText("Start EMOM");
+        countdownTextView.setText("0:00");
     }
 
     public void controlTimer(View view) {
