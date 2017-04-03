@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         timeSlider.setEnabled(true);
         workRestSlider.setEnabled(true);
         statusChangeButton.setText("Start Workout");
-        countdownTextView.setText("0:00");
+        countdownTextView.setText(timeSlider.getProgress()/60+":00");
     }
 
     public void controlTimer(View view) {
