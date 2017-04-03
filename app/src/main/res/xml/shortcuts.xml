@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="303030"
+        android:enabled="true"
+        android:icon="@drawable/ic_av_timer_black_24dp"
+        android:shortcutShortLabel="@string/workout303030_label_short"
+        android:shortcutLongLabel="@string/workout303030_label_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.danielpape.EMOM"
+            android:targetClass="com.danielpape.EMOM.WorkoutActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="203030"
+        android:enabled="true"
+        android:icon="@drawable/ic_av_timer_black_24dp"
+        android:shortcutShortLabel="@string/workout203030_label_short"
+        android:shortcutLongLabel="@string/workout203030_label_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.danielpape.EMOM"
+            android:targetClass="com.danielpape.EMOM.WorkoutActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="104020"
+        android:enabled="true"
+        android:icon="@drawable/ic_av_timer_black_24dp"
+        android:shortcutShortLabel="@string/workout104020_label_short"
+        android:shortcutLongLabel="@string/workout104020_label_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.danielpape.EMOM"
+            android:targetClass="com.danielpape.EMOM.WorkoutActivity" />
+    </shortcut>
+</shortcuts>
+
