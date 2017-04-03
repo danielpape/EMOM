@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
             timeSlider.setEnabled(false);
             workRestSlider.setEnabled(false);
             statusChangeButton.setText("Stop Workout");
+            MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.workoutstarted);
+            mPlayer.start();
 
             countDownTimer = new CountDownTimer(timeSlider.getProgress() * 1000 + 100, 1000) {
 
@@ -62,11 +64,16 @@ public class MainActivity extends AppCompatActivity {
                     updateTimer((int) l / 1000);
 
                     if (seconds == 3) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdown);
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
                         mPlayer.start();
-                    } else if (seconds == restTime+3) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdown);
+                    } else if((minutes == 0) && (seconds == restTime+3)) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
                         mPlayer.start();
+                    } else if ((seconds == restTime+3)) {
+                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
+                        mPlayer.start();
+                    } else if ((minutes == 0) && (seconds == restTime)) {
+                        resetTimer();
                     }
 
                 }
@@ -74,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFinish() {
 
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.complete);
-                    mPlayer.start();
                     resetTimer();
 
                 }
