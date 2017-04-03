@@ -1,4 +1,4 @@
-package com.danielpape.testapp;
+package com.danielpape.EMOM;
 
 import org.junit.Test;
 

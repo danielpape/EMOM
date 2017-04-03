@@ -1,4 +1,4 @@
-package com.danielpape.testapp;
+package com.danielpape.EMOM;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,16 +1,15 @@
-package com.danielpape.testapp;
+package com.danielpape.EMOM;
 
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.content.Intent;
 
-import junit.framework.Test;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,49 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void controlTimer(View view) {
 
-        if(counterIsActive == false) {
-            counterIsActive = true;
-            timeSlider.setEnabled(false);
-            workRestSlider.setEnabled(false);
-            statusChangeButton.setText("Stop Workout");
-            MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.workoutstarted);
-            mPlayer.start();
-
-            countDownTimer = new CountDownTimer(timeSlider.getProgress() * 1000 + 100, 1000) {
-
-                @Override
-                public void onTick(long l) {
-
-                    updateTimer((int) l / 1000);
-
-                    if (seconds == 3) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
-                        mPlayer.start();
-                    } else if((minutes == 0) && (seconds == restTime+3)) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
-                        mPlayer.start();
-                    } else if ((seconds == restTime+3)) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
-                        mPlayer.start();
-                    } else if ((minutes == 0) && (seconds == restTime)) {
-                        resetTimer();
-                    }
-
-                }
-
-                @Override
-                public void onFinish() {
-
-                    resetTimer();
-
-                }
-            }.start();
-        } else {
-
-            resetTimer();
-
-        }
-
+        Intent intent = new Intent(getBaseContext(), WorkoutActivity.class);
+        intent.putExtra("workoutLength", timeSlider.getProgress());
+        intent.putExtra("restTime", restTime);
+        startActivity(intent);
 
     }
 
