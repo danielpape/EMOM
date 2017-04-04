@@ -108,6 +108,10 @@ public class WorkoutActivity extends AppCompatActivity {
         countdownLabel = (TextView)findViewById(R.id.countdownLabel);
         roundTextView = (TextView)findViewById(R.id.roundTextView);
         periodProgressBar = (ProgressBar)findViewById(R.id.periodProgressBar);
+        Button endWorkoutButton = (Button)findViewById(R.id.endWorkoutButton);
+
+        endWorkoutButton.setBackgroundColor(Color.argb(100,255,255,255));
+
 
         workoutLength = getIntent().getIntExtra("workoutLength",600);
         System.out.print("Workout length is: "+workoutLength);
