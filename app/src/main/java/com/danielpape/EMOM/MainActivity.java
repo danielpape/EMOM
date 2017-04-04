@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
         timeSlider = (SeekBar)findViewById(R.id.timeSlider);
         workRestSlider = (SeekBar)findViewById(R.id.workRestSlider);
-        countdownTextView = (TextView)findViewById(R.id.countdownTextView);
         statusChangeButton = (Button)findViewById(R.id.statusChangeButton);
 
 
@@ -103,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
                 timeSlider.setProgress(minutes*60);
-                countdownTextView.setText(minutes+":00");
 
             }
         });

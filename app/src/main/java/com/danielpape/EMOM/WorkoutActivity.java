@@ -1,5 +1,6 @@
 package com.danielpape.EMOM;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.provider.Settings;
@@ -13,12 +14,23 @@ import android.widget.TextView;
 public class WorkoutActivity extends AppCompatActivity {
 
     TextView countdownLabel;
+    TextView roundTextView;
+    TextView workRestTextView;
     Boolean counterIsActive = false;
     CountDownTimer countDownTimer;
     Integer workoutLength;
     Integer minutes;
     Integer seconds;
     Integer restTime;
+    Integer workTime;
+    Integer currentRound;
+
+    public void endWorkout (View view){
+        countDownTimer.cancel();
+        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(intent);
+
+    }
 
     public void updateTimer(int secondsLeft) {
         minutes = (int)secondsLeft / 60;
@@ -74,6 +86,8 @@ public class WorkoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_workout);
 
         countdownLabel = (TextView)findViewById(R.id.countdownLabel);
+        roundTextView = (TextView)findViewById(R.id.roundTextView);
+        workRestTextView = (TextView)findViewById(R.id.workRestTextView);
 
         workoutLength = getIntent().getIntExtra("workoutLength",600);
         System.out.print("Workout length is: "+workoutLength);
@@ -81,8 +95,13 @@ public class WorkoutActivity extends AppCompatActivity {
         seconds = 0;
         System.out.print("processed workout length is: "+minutes+":"+seconds);
         restTime = getIntent().getIntExtra("restTime",20);
+        workTime = 60-restTime;
         countdownLabel.setText((workoutLength/60)+":00");
 
+        currentRound = (workoutLength/60)-minutes+1;
+
+        workRestTextView.setText(restTime+" seconds rest / "+workTime+" seconds work");
+        roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
 
         controlCountdown();
 

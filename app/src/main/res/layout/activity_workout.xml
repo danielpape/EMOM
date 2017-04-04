@@ -16,5 +16,49 @@
         android:textAppearance="@android:style/TextAppearance.Material.Display4"
         android:textSize="136sp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/workRestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="40 secs work / 20 secs rest"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintLeft_toLeftOf="@+id/countdownLabel"
+        app:layout_constraintRight_toRightOf="@+id/countdownLabel"
+        app:layout_constraintTop_toBottomOf="@+id/roundTextView" />
+
+    <Button
+        android:id="@+id/endWorkoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="endWorkout"
+        android:text="End Workout"
+        android:textAppearance="@android:style/TextAppearance.Material.Widget.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/countdownLabel"
+        app:layout_constraintRight_toRightOf="@+id/countdownLabel" />
+
+    <TextView
+        android:id="@+id/roundTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round 1 of 10"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/countdownLabel"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/countdownLabel"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/countdownLabel" />
 </android.support.constraint.ConstraintLayout>
