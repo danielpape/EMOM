@@ -3,4 +3,6 @@
     <color name="colorPrimary">#00BFA5</color>
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#448AFF</color>
+    <color name="workoutGreen">#1DE9B6</color>
+    <color name="workoutRed">#EF5350</color>
 </resources>
