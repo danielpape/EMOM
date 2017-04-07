@@ -65,7 +65,8 @@
         android:text="20 secs rest"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_below="@+id/workTextView"
-        android:layout_toEndOf="@+id/statusChangeButton" />
+        android:layout_toEndOf="@+id/statusChangeButton"
+        android:layout_marginTop="8dp" />
 
     <SeekBar
         android:id="@+id/workRestSlider"

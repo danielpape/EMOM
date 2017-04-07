@@ -41,13 +41,19 @@ public class WorkoutActivity extends AppCompatActivity {
         if(seconds == 0 || seconds == 59 || seconds == 58 || seconds == 57){
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.rgb(29,233,182));
+            periodProgressBar.setMax(workTime);
+            periodProgressBar.setProgress(60-seconds);
         }
         else if(seconds >= 62-workTime){
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.rgb(29,233,182));
+            periodProgressBar.setMax(workTime);
+            periodProgressBar.setProgress(60-seconds);
         }else {
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.rgb(239,83,80));
+            periodProgressBar.setMax(restTime);
+            periodProgressBar.setProgress(restTime-seconds);
         }
 
         minutes = (int)secondsLeft / 60;
@@ -77,6 +83,10 @@ public class WorkoutActivity extends AppCompatActivity {
                     updateTimer((int) l / 1000);
 
                     currentRound = (workoutLength/60)-minutes;
+                    currentRound = (workoutLength/60)-minutes+1;
+                    if (currentRound  < 1){
+                        currentRound = 1;
+                    }
                     roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
 
                     if (seconds == 3) {
@@ -110,9 +120,6 @@ public class WorkoutActivity extends AppCompatActivity {
         periodProgressBar = (ProgressBar)findViewById(R.id.periodProgressBar);
         Button endWorkoutButton = (Button)findViewById(R.id.endWorkoutButton);
 
-        endWorkoutButton.setBackgroundColor(Color.argb(100,255,255,255));
-
-
         workoutLength = getIntent().getIntExtra("workoutLength",600);
         System.out.print("Workout length is: "+workoutLength);
         minutes = workoutLength / 60;
@@ -123,6 +130,9 @@ public class WorkoutActivity extends AppCompatActivity {
         countdownLabel.setText((workoutLength/60)+":00");
 
         currentRound = (workoutLength/60)-minutes+1;
+        if (currentRound  < 1){
+            currentRound = 1;
+        }
 
         roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
         periodProgressBar.setMax(60);
