@@ -99,12 +99,15 @@ public class WorkoutActivity extends AppCompatActivity {
                         MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
                         mPlayer.start();
                     }
+                    else if((minutes == 0) && (seconds == restTime)) {
+                        finish();
+                    }
 
                 }
 
                 @Override
                 public void onFinish() {
-
+                    finish();
 
                 }
             }.start();
