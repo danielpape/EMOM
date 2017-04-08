@@ -83,8 +83,7 @@ public class WorkoutActivity extends AppCompatActivity {
                     updateTimer((int) l / 1000);
 
                     currentRound = (workoutLength/60)-minutes;
-                    currentRound = (workoutLength/60)-minutes+1;
-                    if (currentRound  < 1){
+                    if (currentRound  == 0){
                         currentRound = 1;
                     }
                     roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
@@ -133,7 +132,7 @@ public class WorkoutActivity extends AppCompatActivity {
         countdownLabel.setText((workoutLength/60)+":00");
 
         currentRound = (workoutLength/60)-minutes+1;
-        if (currentRound  < 1){
+        if (currentRound  == 0){
             currentRound = 1;
         }
 
