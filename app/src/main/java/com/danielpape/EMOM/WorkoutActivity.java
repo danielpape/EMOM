@@ -42,7 +42,11 @@ public class WorkoutActivity extends AppCompatActivity {
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.rgb(29,233,182));
             periodProgressBar.setMax(workTime);
-            periodProgressBar.setProgress(60-seconds);
+            if (seconds == 0 && currentRound == 1) {
+                periodProgressBar.setProgress(0);
+            }else {
+                periodProgressBar.setProgress(60 - seconds);
+            }
         }
         else if(seconds >= 62-workTime){
             View view = this.getWindow().getDecorView();
@@ -67,13 +71,14 @@ public class WorkoutActivity extends AppCompatActivity {
         }
 
         countdownLabel.setText(minuteString+":"+secondString);
-        periodProgressBar.setProgress(60-seconds);
 
     }
 
     public void controlCountdown (){
             MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.workoutstarted);
             mPlayer.start();
+
+            periodProgressBar.setProgress(0);
 
             countDownTimer = new CountDownTimer(workoutLength * 1000 + 100, 1000) {
 
@@ -138,6 +143,7 @@ public class WorkoutActivity extends AppCompatActivity {
 
         roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
         periodProgressBar.setMax(60);
+        periodProgressBar.setProgress(0);
 
         controlCountdown();
 
