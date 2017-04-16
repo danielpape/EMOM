@@ -7,8 +7,8 @@ android {
         applicationId 'com.danielpape.EMOM'
         minSdkVersion 21
         targetSdkVersion 25
-        versionCode 102
-        versionName "1.0.2"
+        versionCode 111
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

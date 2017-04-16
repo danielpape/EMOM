@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.content.res.Configuration;
+import android.view.WindowManager;
 
 public class WorkoutActivity extends AppCompatActivity {
 
@@ -38,7 +40,7 @@ public class WorkoutActivity extends AppCompatActivity {
     }
 
     public void updateTimer(int secondsLeft) {
-        if(seconds == 0 || seconds == 59 || seconds == 58 || seconds == 57){
+        if(seconds == 00 || seconds == 59 || seconds == 58 || seconds == 57){
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.rgb(29,233,182));
             periodProgressBar.setMax(workTime);
@@ -154,4 +156,12 @@ public class WorkoutActivity extends AppCompatActivity {
         super.onStop();
         countDownTimer.cancel();
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
 }

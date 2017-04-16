@@ -20,15 +20,15 @@
         android:textAppearance="@android:style/TextAppearance.Material.Display4"
         android:textSize="148sp"
         android:typeface="monospace"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/endWorkoutButton"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <ProgressBar
         android:id="@+id/periodProgressBar"
