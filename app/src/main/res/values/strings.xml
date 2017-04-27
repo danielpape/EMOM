@@ -2,8 +2,4 @@
     <string name="app_name">EMOM</string>
     <string name="workout104020_label_short">Begin 10 min 40/20</string>
     <string name="workout104020_label_long">Begin 10 min 40/20</string>
-    <string name="workout203030_label_short">Begin 20 min 30/20</string>
-    <string name="workout203030_label_long">Begin 20 min 30/20</string>
-    <string name="workout303030_label_short">Begin 30 min 30/30</string>
-    <string name="workout303030_label_long">Begin 30 min 30/30</string>
 </resources>
