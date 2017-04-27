@@ -23,6 +23,18 @@
             android:name=".WorkoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="EMOM Workout"></activity>
+        <activity
+            android:name=".Workout104020Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="EMOM Workout"></activity>
+        <activity
+            android:name=".Workout303030Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="EMOM Workout"></activity>
+        <activity
+            android:name=".Workout204020Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="EMOM Workout"></activity>
     </application>
 
 </manifest>

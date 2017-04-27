@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 
-public class Workout402010Activity extends AppCompatActivity {
+public class Workout303030Activity extends AppCompatActivity {
 
     TextView countdownLabel;
     TextView roundTextView;
@@ -129,12 +129,12 @@ public class Workout402010Activity extends AppCompatActivity {
         periodProgressBar = (ProgressBar)findViewById(R.id.periodProgressBar);
         Button endWorkoutButton = (Button)findViewById(R.id.endWorkoutButton);
 
-        workoutLength = 600;
+        workoutLength = 1800;
         System.out.print("Workout length is: "+workoutLength);
         minutes = workoutLength / 60;
         seconds = 0;
         System.out.print("processed workout length is: "+minutes+":"+seconds);
-        restTime = 20;
+        restTime = 30;
         workTime = 60-restTime;
         countdownLabel.setText((workoutLength/60)+":00");
 

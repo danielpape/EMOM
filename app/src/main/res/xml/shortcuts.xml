@@ -4,12 +4,34 @@
         android:shortcutId="303030"
         android:enabled="true"
         android:icon="@drawable/ic_av_timer_black_24dp"
+        android:shortcutShortLabel="@string/workout303030_label_short"
+        android:shortcutLongLabel="@string/workout303030_label_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.danielpape.EMOM"
+            android:targetClass="com.danielpape.EMOM.Workout303030Activity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="204020"
+        android:enabled="true"
+        android:icon="@drawable/ic_av_timer_black_24dp"
+        android:shortcutShortLabel="@string/workout204020_label_short"
+        android:shortcutLongLabel="@string/workout204020_label_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.danielpape.EMOM"
+            android:targetClass="com.danielpape.EMOM.Workout204020Activity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="104020"
+        android:enabled="true"
+        android:icon="@drawable/ic_av_timer_black_24dp"
         android:shortcutShortLabel="@string/workout104020_label_short"
         android:shortcutLongLabel="@string/workout104020_label_long">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.danielpape.EMOM"
-            android:targetClass="com.danielpape.EMOM.WorkoutActivity" />
+            android:targetClass="com.danielpape.EMOM.Workout104020Activity" />
     </shortcut>
 </shortcuts>
 
