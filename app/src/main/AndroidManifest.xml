@@ -8,6 +8,10 @@
         android:label="EMOM"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <adaptive-icon>
+            <background android:drawable="@color/ic_background"/>
+            <foreground android:drawable="@mipmap/ic_foreground"/>
+        </adaptive-icon>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
