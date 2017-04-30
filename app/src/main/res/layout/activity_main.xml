@@ -151,7 +151,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="18dp"
-        android:text="Settings"
+        android:text="Set up a workout"
         android:textAppearance="@android:style/TextAppearance.Material.Title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
