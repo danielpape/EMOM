@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.danielpape.EMOM">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".EMOM"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
         android:label="EMOM"
@@ -19,25 +20,27 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data android:name="android.app.shortcuts"
+
+            <meta-data
+                android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
             android:name=".WorkoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="EMOM Workout"></activity>
+            android:label="EMOM Workout" />
         <activity
             android:name=".Workout104020Activity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="EMOM Workout"></activity>
+            android:label="EMOM Workout" />
         <activity
             android:name=".Workout303030Activity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="EMOM Workout"></activity>
+            android:label="EMOM Workout" />
         <activity
             android:name=".Workout204020Activity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="EMOM Workout"></activity>
+            android:label="EMOM Workout" />
     </application>
 
 </manifest>
