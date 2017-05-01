@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "231931639890",
+    "project_id": "firebase-emom"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231931639890:android:ca3f7b5cdb2a8da7",
+        "android_client_info": {
+          "package_name": "com.danielpape.EMOM"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqcR9ijgXv0qDJaRZS3Pxv2wyspIZ5DpM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-44827947-3"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

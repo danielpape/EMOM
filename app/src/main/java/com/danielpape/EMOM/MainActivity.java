@@ -1,6 +1,8 @@
 package com.danielpape.EMOM;
 
 import android.media.MediaPlayer;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +11,9 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.Intent;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
+import android.app.Application;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
     int restTime;
     Boolean counterIsActive = false;
     CountDownTimer countDownTimer;
+
+    private Tracker mTracker;
+
+    synchronized public Tracker getDefaultTracker() {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+            mTracker = analytics.newTracker(R.xml.global_tracker);
+        }
+        return mTracker;
+    }
 
     public void updateTimer(int secondsLeft) {
         minutes = (int)secondsLeft / 60;
@@ -58,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        
 
         timeSlider = (SeekBar)findViewById(R.id.timeSlider);
         workRestSlider = (SeekBar)findViewById(R.id.workRestSlider);
