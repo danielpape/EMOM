@@ -8,9 +8,14 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.Intent;
+import android.app.Application;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Tracker mTracker;
 
     SeekBar timeSlider;
     SeekBar workRestSlider;
@@ -46,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void controlTimer(View view) {
 
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Start Workout")
+                .build());
+
         Intent intent = new Intent(getBaseContext(), WorkoutActivity.class);
         intent.putExtra("workoutLength", timeSlider.getProgress());
         intent.putExtra("restTime", restTime);
@@ -57,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        EMOM application = (EMOM) getApplication();
+        mTracker = application.getDefaultTracker();
+
+        mTracker.setScreenName("Image~" + "main");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         timeSlider = (SeekBar)findViewById(R.id.timeSlider);
         workRestSlider = (SeekBar)findViewById(R.id.workRestSlider);
@@ -125,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
     }
