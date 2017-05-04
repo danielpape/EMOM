@@ -38,9 +38,13 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="EMOM Workout" />
         <activity
-            android:name=".Workout204020Activity"
+        android:name=".Workout204020Activity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:label="EMOM Workout" />
+        <activity
+            android:name=".CompletedActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="EMOM Workout" />
+            android:label="EMOM Complete" />
     </application>
 
 </manifest>
