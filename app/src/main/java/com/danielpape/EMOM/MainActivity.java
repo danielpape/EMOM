@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("Start Workout")
                 .build());
 
-        Intent intent = new Intent(getBaseContext(), WorkoutActivity.class);
-        intent.putExtra("workoutLength", timeSlider.getProgress());
-        intent.putExtra("restTime", restTime);
+        Intent intent = new Intent(getBaseContext(), CompletedActivity.class);
+//        intent.putExtra("workoutLength", timeSlider.getProgress());
+//        intent.putExtra("restTime", restTime);
         startActivity(intent);
 
     }

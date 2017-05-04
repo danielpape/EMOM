@@ -1,32 +1,25 @@
-package com.danielpape.EMOM;
+ package com.danielpape.EMOM;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
-import android.widget.SeekBar;
-import android.widget.TextView;
+ import android.net.Uri;
+ import android.support.v7.app.AppCompatActivity;
+ import android.os.Bundle;
+ import android.view.View;
+ import android.widget.Button;
+ import android.content.Intent;
 
-import com.google.android.gms.analytics.HitBuilders;
 
 public class CompletedActivity extends AppCompatActivity {
+
+    Intent shareIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_completed);
 
-            Button twitterShareButton = (Button) findViewById(R.id.twitterShareButton);
+        Button twitterShareButton = (Button) findViewById(R.id.twitterShareButton);
 
 
 
-            }
-        });
-
-        public void twitterButtonTapped(View view){
-            String tweetUrl = "https://twitter.com/intent/tweet?text=" + shareText;
-            Uri uri = Uri.parse(tweetUrl);
-            shareIntent = new Intent(Intent.ACTION_VIEW, uri);
-            return shareIntent;
-        }
-
+    }
 }
