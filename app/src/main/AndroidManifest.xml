@@ -9,7 +9,7 @@
         android:name=".EMOM"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
-        android:label="Olympia"
+        android:label="EMOM"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -45,6 +45,10 @@
             android:name=".CompletedActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="EMOM Complete" />
+        <activity
+            android:name=".TabataActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="Tabata" />
     </application>
 
 </manifest>

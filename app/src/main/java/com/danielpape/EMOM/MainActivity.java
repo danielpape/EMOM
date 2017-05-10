@@ -24,21 +24,9 @@ public class MainActivity extends AppCompatActivity {
     int minutes;
     int seconds;
     int restTime;
+    int roundTime;
     Boolean counterIsActive = false;
     CountDownTimer countDownTimer;
-
-    public void updateTimer(int secondsLeft) {
-        minutes = (int)secondsLeft / 60;
-        seconds = secondsLeft - minutes * 60;
-
-        String secondString = Integer.toString(seconds);
-
-        if (seconds <= 9){
-            secondString = "0" + secondString;
-        }
-
-        countdownTextView.setText(Integer.toString(minutes)+":"+secondString);
-    }
 
     public void resetTimer (){
         countDownTimer.cancel();
@@ -56,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("Start Workout")
                 .build());
 
-        Intent intent = new Intent(getBaseContext(), CompletedActivity.class);
+        Intent intent = new Intent(getBaseContext(), TabataActivity.class);
 //        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
+//        intent.putExtra("roundTime", roundTime);
         startActivity(intent);
 
     }
@@ -87,12 +76,13 @@ public class MainActivity extends AppCompatActivity {
         workRestSlider.setMax(40);
         workRestSlider.setProgress(30);
         restTime = 20;
+        roundTime = 60;
 
         timeSlider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
-                minutes = (int) i / 60;
+                minutes = (int) i / roundTime;
                 int second = i - minutes * 60;
                 if(minutes == 0){
                     minutes = 1;
@@ -125,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 i = i+10;
 
-                restTime = (int) 60 - i;
+                restTime = (int) roundTime - i;
                 workTextView.setText(Integer.toString(i)+" secs work");
                 restTimeTextView.setText(Integer.toString(restTime)+" secs rest");
 
