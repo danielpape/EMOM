@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityOptions"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,6 +49,10 @@
             android:name=".TabataActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="Tabata" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="EMOM Options" />
     </application>
 
 </manifest>
