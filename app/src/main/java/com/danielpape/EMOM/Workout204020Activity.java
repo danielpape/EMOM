@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.res.Configuration;
 import android.view.WindowManager;
@@ -34,7 +31,7 @@ public class Workout204020Activity extends AppCompatActivity {
 
     public void endWorkout (View view){
         countDownTimer.cancel();
-        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+        Intent intent = new Intent(getBaseContext(), SetUpIntervalEMOMActivity.class);
         startActivity(intent);
 
     }

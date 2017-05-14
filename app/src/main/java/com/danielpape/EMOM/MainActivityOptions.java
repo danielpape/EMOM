@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.Intent;
-import android.app.Application;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -32,10 +31,40 @@ public class MainActivityOptions extends AppCompatActivity {
 
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory("Action")
-                .setAction("Start Workout")
+                .setAction("Select Interval EMOM")
                 .build());
 
-        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+        Intent intent = new Intent(getBaseContext(), SetUpIntervalEMOMActivity.class);
+//        intent.putExtra("workoutLength", timeSlider.getProgress());
+//        intent.putExtra("restTime", restTime);
+//        intent.putExtra("roundTime", roundTime);
+        startActivity(intent);
+
+    }
+
+    public void tapRepsEMOMButton(View view) {
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Select Reps EMOM")
+                .build());
+
+        Intent intent = new Intent(getBaseContext(), SetUpRepsEMOMActivity.class);
+//        intent.putExtra("workoutLength", timeSlider.getProgress());
+//        intent.putExtra("restTime", restTime);
+//        intent.putExtra("roundTime", roundTime);
+        startActivity(intent);
+
+    }
+
+    public void tapTabataButton(View view) {
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Select Reps EMOM")
+                .build());
+
+        Intent intent = new Intent(getBaseContext(), SetUpTabataWorkoutActivity.class);
 //        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
 //        intent.putExtra("roundTime", roundTime);

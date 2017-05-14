@@ -8,12 +8,11 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.Intent;
-import android.app.Application;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
-public class MainActivity extends AppCompatActivity {
+public class SetUpIntervalEMOMActivity extends AppCompatActivity {
 
     private Tracker mTracker;
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_setup_interval_emom);
 
         EMOM application = (EMOM) getApplication();
         mTracker = application.getDefaultTracker();
