@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -9,7 +10,7 @@
     android:id="@+id/activity_mainOptions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground"
+    android:background="@color/MainBG"
     android:orientation="vertical"
     tools:context="com.danielpape.EMOM.SetUpIntervalEMOMActivity">
 
@@ -17,21 +18,88 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:elevation="2dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/main_activity_image" />
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/gradientheader" />
+
+    <android.support.v7.widget.CardView
+    android:id="@+id/EMOMCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="-172dp"
+    app:cardBackgroundColor="@color/CardBG"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-28dp"
+            android:background="@color/CardSecondary"
+            android:scaleType="centerCrop" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="-16dp"
+            android:clickable="true"
+            android:onClick="tapEMOMButton"
+            app:backgroundTint="@color/FabGreen"
+            app:elevation="4dp"
+            app:fabSize="normal"
+            app:srcCompat="@color/FabGreen" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Interval EMOM Workout"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            tools:text="EMOM Workout" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Perform excerise for a set period of time every minute on the minute. e.g. 40 seconds of work followed by 20 seconds of rest"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/EMOMCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="-128dp"
-        app:cardBackgroundColor="@color/cardview_light_background"
+        android:layout_marginTop="0dp"
+        app:cardBackgroundColor="@color/CardBG"
         app:cardCornerRadius="2dp"
-        app:cardElevation="2dp"
-        app:contentPadding="8dp">
+        app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,11 +107,36 @@
             android:orientation="vertical"
             android:weightSum="4">
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="-28dp"
+                android:background="@color/CardSecondary"
+                android:scaleType="centerCrop" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="-16dp"
+                android:clickable="true"
+                android:onClick="tapEMOMButton"
+                app:backgroundTint="@color/FabGreen"
+                app:elevation="4dp"
+                app:fabSize="normal"
+                app:srcCompat="@color/FabGreen" />
+
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
                 android:text="Interval EMOM Workout"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
@@ -53,22 +146,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
                 android:text="Perform excerise for a set period of time every minute on the minute. e.g. 40 seconds of work followed by 20 seconds of rest"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="14dp" />
-
-            <Button
-                android:id="@+id/button4"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:backgroundTint="@color/colorAccent"
-                android:onClick="tapEMOMButton"
-                android:text="Choose Interval EMOM"
-                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
@@ -78,14 +161,13 @@
         android:id="@+id/EMOMCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="0dp"
-        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardBackgroundColor="@color/CardBG"
         app:cardCornerRadius="2dp"
-        app:cardElevation="2dp"
-        app:contentPadding="8dp">
+        app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,12 +175,37 @@
             android:orientation="vertical"
             android:weightSum="4">
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="-28dp"
+                android:background="@color/CardSecondary"
+                android:scaleType="centerCrop" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="-16dp"
+                android:clickable="true"
+                android:onClick="tapEMOMButton"
+                app:backgroundTint="@color/FabGreen"
+                app:elevation="4dp"
+                app:fabSize="normal"
+                app:srcCompat="@color/FabGreen" />
+
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Reps EMOM Workout"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Interval EMOM Workout"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
 
@@ -107,79 +214,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Perform excerise for a set amount of repetitions every minute on the minute"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Perform excerise for a set period of time every minute on the minute. e.g. 40 seconds of work followed by 20 seconds of rest"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="14dp" />
-
-            <Button
-                android:id="@+id/button4"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:backgroundTint="@color/colorAccent"
-                android:onClick="tapRepsEMOMButton"
-                android:text="Choose Reps EMOM"
-                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/EMOMCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:cardBackgroundColor="@color/cardview_light_background"
-        app:cardCornerRadius="2dp"
-        app:cardElevation="2dp"
-        app:contentPadding="8dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="4">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Tabata Workout"
 
-                android:textAppearance="@android:style/TextAppearance.Material.Title"
-                tools:text="Tabata Workout" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Perform exercise in a set interval of 20 seconds work then 10 seconds rest"
-                android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="14dp" />
 
-            <Button
-                android:id="@+id/button4"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:backgroundTint="@color/colorAccent"
-                android:onClick="tapTabataButton"
-                android:text="Choose Tabata"
-                android:textColor="@color/colorPrimaryDark" />
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
 </LinearLayout>
 </ScrollView>

@@ -5,5 +5,9 @@
     <color name="colorAccent">#448aff</color>
     <color name="workoutGreen">#1DE9B6</color>
     <color name="workoutRed">#EF5350</color>
-    <color name="Card2BG">#e0f7fa</color>
+    <color name="CardBG">#E0F2F1</color>
+    <color name="MainBG">#004D40</color>
+    <color name="CardSecondary">#B2DFDB</color>
+    <color name="FabGreen">#009688</color>
+
 </resources>
