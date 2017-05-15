@@ -27,7 +27,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="-64dp"
+        android:layout_marginTop="-128dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp"
@@ -45,9 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Interval EMOM Workout"
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="24dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
 
             <TextView
@@ -70,8 +68,7 @@
                 android:backgroundTint="@color/colorAccent"
                 android:onClick="tapEMOMButton"
                 android:text="Choose Interval EMOM"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="16dp" />
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
@@ -102,9 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Reps EMOM Workout"
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="24dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
 
             <TextView
@@ -127,8 +122,7 @@
                 android:backgroundTint="@color/colorAccent"
                 android:onClick="tapRepsEMOMButton"
                 android:text="Choose Reps EMOM"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="16dp" />
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
@@ -159,9 +153,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Tabata Workout"
 
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title.Inverse"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="24sp"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="Tabata Workout" />
 
             <TextView
@@ -182,10 +174,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
                 android:backgroundTint="@color/colorAccent"
-                android:text="Choose Tabata"
                 android:onClick="tapTabataButton"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="16dp" />
+                android:text="Choose Tabata"
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
