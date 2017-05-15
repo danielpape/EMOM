@@ -27,7 +27,7 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".WorkoutActivity"
+            android:name=".EMOMWorkoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="EMOM Workout" />
         <activity
@@ -50,6 +50,10 @@
             android:name=".TabataActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="Tabata" />
+        <activity
+            android:name=".repsEMOMWorkoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="Reps EMOM" />
         <activity
             android:name=".SetUpIntervalEMOMActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

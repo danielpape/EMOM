@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true"
-    tools:context="com.danielpape.EMOM.WorkoutActivity">
+    tools:context="com.danielpape.EMOM.EMOMWorkoutActivity">
 
     <TextView
         android:id="@+id/countdownLabel"

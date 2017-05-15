@@ -27,7 +27,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="-32dp"
+        android:layout_marginTop="-64dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp"

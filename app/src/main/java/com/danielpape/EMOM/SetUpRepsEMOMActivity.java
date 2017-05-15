@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.content.Intent;
-import android.app.Application;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -34,7 +33,7 @@ public class SetUpRepsEMOMActivity extends AppCompatActivity {
                 .setAction("Start Reps Workout")
                 .build());
 
-        Intent intent = new Intent(getBaseContext(), TabataActivity.class);
+        Intent intent = new Intent(getBaseContext(), repsEMOMWorkoutActivity.class);
 //        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
 //        intent.putExtra("roundTime", roundTime);

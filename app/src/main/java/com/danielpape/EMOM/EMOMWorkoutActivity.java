@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 
-public class WorkoutActivity extends AppCompatActivity {
+public class EMOMWorkoutActivity extends AppCompatActivity {
 
     TextView countdownLabel;
     TextView roundTextView;
