@@ -124,7 +124,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="-16dp"
                 android:clickable="true"
-                android:onClick="tapEMOMButton"
+                android:onClick="tapRepsEMOMButton"
                 app:backgroundTint="@color/FabGreen"
                 app:elevation="4dp"
                 app:fabSize="normal"
@@ -137,7 +137,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:text="Interval EMOM Workout"
+                android:text="Reps EMOM Workout"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
 
@@ -148,7 +148,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:text="Perform excerise for a set period of time every minute on the minute. e.g. 40 seconds of work followed by 20 seconds of rest"
+                android:text="Perform a set number of reps of an exercise every minute on the minute."
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="14dp" />
@@ -192,7 +192,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="-16dp"
                 android:clickable="true"
-                android:onClick="tapEMOMButton"
+                android:onClick="tapTabataButton"
                 app:backgroundTint="@color/FabGreen"
                 app:elevation="4dp"
                 app:fabSize="normal"
@@ -205,7 +205,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:text="Interval EMOM Workout"
+                android:text="Tabata Workout"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 tools:text="EMOM Workout" />
 
@@ -216,7 +216,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:text="Perform excerise for a set period of time every minute on the minute. e.g. 40 seconds of work followed by 20 seconds of rest"
+                android:text="Perform rounds of excerise for 20 seconds followed by 10 seconds of rest."
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="14dp" />

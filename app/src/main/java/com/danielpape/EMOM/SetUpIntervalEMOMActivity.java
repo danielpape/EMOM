@@ -43,7 +43,7 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
                 .setAction("Start Workout")
                 .build());
 
-        Intent intent = new Intent(getBaseContext(), TabataActivity.class);
+        Intent intent = new Intent(getBaseContext(), EMOMWorkoutActivity.class);
 //        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
 //        intent.putExtra("roundTime", roundTime);
