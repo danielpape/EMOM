@@ -104,7 +104,7 @@ public class EMOMWorkoutActivity extends AppCompatActivity {
                             }
                         });
                     } else if((minutes == 0) && (seconds == restTime+3)) {
-                       MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
+                       final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
                         mPlayer.start();
                         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                             @Override
@@ -113,7 +113,7 @@ public class EMOMWorkoutActivity extends AppCompatActivity {
                             }
                         });
                     } else if ((seconds == restTime+3)) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
+                        final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
                         mPlayer.start();
                         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                             @Override
