@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 
+import java.io.IOException;
+
 public class EMOMWorkoutActivity extends AppCompatActivity {
 
     TextView countdownLabel;
@@ -93,14 +95,32 @@ public class EMOMWorkoutActivity extends AppCompatActivity {
                     roundTextView.setText("Round "+currentRound+" of "+(workoutLength/60));
 
                     if (seconds == 3) {
-                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
+                        final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
                         mPlayer.start();
+                        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mPlayer.release();
+                            }
+                        });
                     } else if((minutes == 0) && (seconds == restTime+3)) {
                        MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
                         mPlayer.start();
+                        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mPlayer.release();
+                            }
+                        });
                     } else if ((seconds == restTime+3)) {
                         MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
                         mPlayer.start();
+                        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mPlayer.release();
+                            }
+                        });
                     }
                     else if((minutes == 0) && (seconds == restTime)) {
                         finish();

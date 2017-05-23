@@ -44,9 +44,9 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
                 .build());
 
         Intent intent = new Intent(getBaseContext(), EMOMWorkoutActivity.class);
-//        intent.putExtra("workoutLength", timeSlider.getProgress());
-//        intent.putExtra("restTime", restTime);
-//        intent.putExtra("roundTime", roundTime);
+        intent.putExtra("workoutLength", timeSlider.getProgress());
+        intent.putExtra("restTime", restTime);
+        intent.putExtra("roundTime", roundTime);
         startActivity(intent);
 
     }

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.content.res.Configuration;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class TabataActivity extends AppCompatActivity {
 
@@ -114,12 +115,14 @@ public class TabataActivity extends AppCompatActivity {
 
                 if (seconds == 3 || seconds == 33) {
                     MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
+                    Toast.makeText(TabataActivity.this, "Begin", Toast.LENGTH_SHORT).show();
                     mPlayer.start();
                 } else if((minutes == 0) && (seconds == 10)) {
                     MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
                     mPlayer.start();
                 } else if ((seconds == restTime+3 || seconds == restTime+33)) {
                     MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
+                    Toast.makeText(TabataActivity.this, "Rest", Toast.LENGTH_SHORT).show();
                     mPlayer.start();
                 }
                 else if((minutes == 0) && (seconds == restTime)) {
