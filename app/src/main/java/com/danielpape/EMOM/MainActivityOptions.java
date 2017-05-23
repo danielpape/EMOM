@@ -65,9 +65,6 @@ public class MainActivityOptions extends AppCompatActivity {
                 .build());
 
         Intent intent = new Intent(getBaseContext(), SetUpTabataWorkoutActivity.class);
-//        intent.putExtra("workoutLength", timeSlider.getProgress());
-//        intent.putExtra("restTime", restTime);
-//        intent.putExtra("roundTime", roundTime);
         startActivity(intent);
 
     }

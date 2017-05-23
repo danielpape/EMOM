@@ -147,4 +147,9 @@ public class repsEMOMWorkoutActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    public void onBackPressed() {
+        Intent intent = new Intent(getBaseContext(), MainActivityOptions.class);
+        startActivity(intent);
+    }
+
 }
