@@ -67,8 +67,7 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
         statusChangeButton = (Button)findViewById(R.id.statusChangeButton);
 
         final TextView totalTimeTextView = (TextView)findViewById(R.id.totalTimeTextView);
-        final TextView workTextView = (TextView)findViewById(R.id.workTextView);
-        final TextView restTimeTextView = (TextView)findViewById(R.id.restTextView);
+        final TextView workRestTextView = (TextView)findViewById(R.id.IntervalLengthLabel);
 
         timeSlider.setMax(1800);
         timeSlider.setProgress(600);
@@ -87,9 +86,9 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
                     minutes = 1;
                 }
                 if(minutes == 1){
-                    totalTimeTextView.setText(Integer.toString(minutes)+" minute");
+                    totalTimeTextView.setText(Integer.toString(minutes)+" min");
                 }else {
-                    totalTimeTextView.setText(Integer.toString(minutes) + " minutes");
+                    totalTimeTextView.setText(Integer.toString(minutes) + " mins");
                 }
 
 
@@ -115,8 +114,7 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
                 i = i+10;
 
                 restTime = (int) roundTime - i;
-                workTextView.setText(Integer.toString(i)+" secs work");
-                restTimeTextView.setText(Integer.toString(restTime)+" secs rest");
+                workRestTextView.setText(Integer.toString(i)+"s work / "+Integer.toString(restTime)+"s rest");
 
             }
 

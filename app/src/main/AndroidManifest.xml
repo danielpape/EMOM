@@ -57,7 +57,8 @@
         <activity
             android:name=".SetUpIntervalEMOMActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="Set up Interval EMOM" />
+            android:label="Set up Interval EMOM"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SetUpRepsEMOMActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
