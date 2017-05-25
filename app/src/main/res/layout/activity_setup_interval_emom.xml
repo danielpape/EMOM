@@ -6,16 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
+    android:layout_margin="8dp"
     tools:context="com.danielpape.EMOM.SetUpIntervalEMOMActivity">
 
     <android.support.v7.widget.CardView
-        android:layout_width="395dp"
-        android:layout_height="587dp"
+        android:layout_width="379dp"
+        android:layout_height="571dp"
         android:layout_margin="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp"
         app:cardBackgroundColor="@color/CardBG"
-        android:id="@+id/cardView">
+        android:id="@+id/cardView"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,24 +28,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="83dp"
                 android:text="Workout length"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="64dp" />
 
             <TextView
                 android:id="@+id/totalTimeTextView"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="0dp"
                 android:fontFamily="sans-serif-condensed"
                 android:text="10 mins"
                 android:textAlignment="center"
@@ -65,7 +65,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/totalTimeTextView"
@@ -131,8 +131,23 @@
             tools:layout_conversion_absoluteX="16dp"
             tools:layout_conversion_absoluteY="465dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                android:layout_marginBottom="119dp"
-                app:layout_constraintBottom_toTopOf="@+id/statusChangeButton" />
+                tools:layout_editor_absoluteY="370dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Timer will count you down into each period. Work when the screen is green, rest when the screen is red."
+                app:layout_constraintBottom_toTopOf="@+id/statusChangeButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workRestSlider"
+                app:layout_constraintVertical_bias="0.19999999" />
 
 
         <Button

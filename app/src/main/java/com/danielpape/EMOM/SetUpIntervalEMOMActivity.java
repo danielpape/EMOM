@@ -114,7 +114,7 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
                 i = i+10;
 
                 restTime = (int) roundTime - i;
-                workRestTextView.setText(Integer.toString(i)+"s work / "+Integer.toString(restTime)+"s rest");
+                workRestTextView.setText(Integer.toString(i)+"s work - "+Integer.toString(restTime)+"s rest");
 
             }
 
