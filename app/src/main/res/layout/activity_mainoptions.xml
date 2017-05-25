@@ -69,7 +69,7 @@
                 android:onClick="tapEMOMButton"
                 android:text="Choose Interval Emom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/FabGreen" />
+                android:textColor="@color/colorAccent" />
 
         </LinearLayout>
 
@@ -126,10 +126,10 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="tapRepsEMOMButton"
                 android:text="Choose Reps Emom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/FabGreen"
-                android:onClick="tapRepsEMOMButton"/>
+                android:textColor="@color/colorAccent" />
 
         </LinearLayout>
 
@@ -186,11 +186,10 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="tapTabataButton"
                 android:text="Choose Tabata Emom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/FabGreen"
-                android:onClick="tapTabataButton"
-                />
+                android:textColor="@color/colorAccent" />
 
         </LinearLayout>
 
