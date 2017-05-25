@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -11,6 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/MainBG"
+    app:cardBackgroundColor="@color/CardBG"
     android:orientation="vertical"
     tools:context="com.danielpape.EMOM.SetUpIntervalEMOMActivity">
 
@@ -21,54 +23,55 @@
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="8dp"
-    app:cardBackgroundColor="@color/CardBG"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="4">
-
-
-        <TextView
-            android:id="@+id/textView6"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Interval EMOM Workout"
-            android:textAppearance="@android:style/TextAppearance.Material.Headline"
-            tools:text="EMOM Workout" />
+            android:background="@drawable/cardbggradient"
+            android:orientation="vertical"
+            android:weightSum="4">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Perform excerise for a set period of time every minute on the minute"
-            android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dip"
-            android:background="#dddddd" />
 
-        <Button
-            android:id="@+id/button3"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose Interval Emom"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-            android:textColor="@color/FabGreen"
-            android:onClick="tapEMOMButton"/>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Interval EMOM Workout"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                tools:text="EMOM Workout" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Perform excerise for a set period of time every minute on the minute"
+                android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#dddddd" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="tapEMOMButton"
+                android:text="Choose Interval Emom"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/FabGreen" />
+
+        </LinearLayout>
 
 </android.support.v7.widget.CardView>
 
@@ -80,6 +83,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/CardBG"
+
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp">
 
@@ -87,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@drawable/cardbggradient"
             android:weightSum="4">
 
 
@@ -145,6 +150,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@drawable/cardbggradient"
+
             android:weightSum="4">
 
 
