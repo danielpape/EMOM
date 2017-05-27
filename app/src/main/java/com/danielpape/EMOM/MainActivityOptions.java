@@ -81,4 +81,12 @@ public class MainActivityOptions extends AppCompatActivity {
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
     }
+
+    public void onBackPressed() {
+        Intent mainActivity = new Intent(Intent.ACTION_MAIN);
+        mainActivity.addCategory(Intent.CATEGORY_HOME);
+        mainActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(mainActivity);
+        finish();
+    }
 }

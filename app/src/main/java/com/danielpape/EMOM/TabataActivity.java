@@ -35,7 +35,7 @@ public class TabataActivity extends AppCompatActivity {
 
     public void endWorkout (View view){
         countDownTimer.cancel();
-        Intent intent = new Intent(getBaseContext(), SetUpIntervalEMOMActivity.class);
+        Intent intent = new Intent(getBaseContext(), MainActivityOptions.class);
         startActivity(intent);
 
     }

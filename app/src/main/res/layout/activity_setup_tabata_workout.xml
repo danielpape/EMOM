@@ -6,13 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:layout_margin="8dp"
     tools:context="com.danielpape.EMOM.SetUpTabataWorkoutActivity">
 
     <android.support.v7.widget.CardView
-        android:layout_width="379dp"
-        android:layout_height="571dp"
-        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
         app:cardBackgroundColor="@color/CardBG"
         android:background="@drawable/largecardbggradient"
         android:id="@+id/cardView"

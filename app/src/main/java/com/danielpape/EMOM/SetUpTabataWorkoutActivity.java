@@ -73,9 +73,9 @@ public class SetUpTabataWorkoutActivity extends AppCompatActivity {
                     minutes = 1;
                 }
                 if(minutes == 1){
-                    totalTimeTextView.setText(Integer.toString(minutes)+" minute");
+                    totalTimeTextView.setText(Integer.toString(minutes)+" min");
                 }else {
-                    totalTimeTextView.setText(Integer.toString(minutes) + " minutes");
+                    totalTimeTextView.setText(Integer.toString(minutes) + " mins");
                 }
 
 
