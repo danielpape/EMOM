@@ -40,7 +40,7 @@ public class SetUpIntervalEMOMActivity extends AppCompatActivity {
 
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory("Action")
-                .setAction("Start Workout")
+                .setAction("Start EMOM Workout")
                 .build());
 
         Intent intent = new Intent(getBaseContext(), EMOMWorkoutActivity.class);

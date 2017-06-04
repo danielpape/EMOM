@@ -112,18 +112,37 @@ public class TabataActivity extends AppCompatActivity {
                     currentRound = 1;
                 }
                 roundTextView.setText("Round "+currentRound+" of "+totalRounds);
+                if (seconds == 1 || seconds == 31) {
+                    currentRound++;
+                }
 
                 if (seconds == 3 || seconds == 33) {
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
-                    Toast.makeText(TabataActivity.this, "Begin", Toast.LENGTH_SHORT).show();
+                    final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownbegin);
                     mPlayer.start();
+                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mPlayer.release();
+                        }
+                    });
                 } else if((minutes == 0) && (seconds == 10)) {
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
+                    final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownworkoutcomplete);
                     mPlayer.start();
+                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mPlayer.release();
+                        }
+                    });
                 } else if ((seconds == restTime+3 || seconds == restTime+33)) {
-                    MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
-                    Toast.makeText(TabataActivity.this, "Rest", Toast.LENGTH_SHORT).show();
+                    final MediaPlayer mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.countdownrest);
                     mPlayer.start();
+                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mPlayer.release();
+                        }
+                    });
                 }
                 else if((minutes == 0) && (seconds == restTime)) {
                     finish();

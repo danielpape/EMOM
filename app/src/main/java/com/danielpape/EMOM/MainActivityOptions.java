@@ -61,7 +61,7 @@ public class MainActivityOptions extends AppCompatActivity {
 
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory("Action")
-                .setAction("Select Reps EMOM")
+                .setAction("Select Tabata EMOM")
                 .build());
 
         Intent intent = new Intent(getBaseContext(), SetUpTabataWorkoutActivity.class);
