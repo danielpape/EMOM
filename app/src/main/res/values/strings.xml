@@ -6,4 +6,10 @@
     <string name="workout204020_label_long">Begin 20 min 40/20</string>
     <string name="workout303030_label_short">Begin 30 min 30/30</string>
     <string name="workout303030_label_long">Begin 30 min 30/30</string>
+    <string name="_10_mins">10 mins</string>
+    <string name="_40s_work_20s_rest">40s work - 20s rest</string>
+    <string name="interval_lengths">Interval lengths</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="timer_will_count_you_down_into_each_period_work_when_the_screen_is_green_rest_when_the_screen_is_red">Timer will count you down into each period. Work when the screen is green, rest when the screen is red.</string>
+    <string name="workout_length">Workout length</string>
 </resources>

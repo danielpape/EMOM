@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00bfa5</color>
-    <color name="colorPrimaryDark">#009688</color>
+    <color name="colorPrimary">#53CCC6</color>
+    <color name="colorPrimaryDark">#1AACA4</color>
     <color name="colorAccent">#448aff</color>
     <color name="workoutGreen">#1DE9B6</color>
     <color name="workoutRed">#EF5350</color>

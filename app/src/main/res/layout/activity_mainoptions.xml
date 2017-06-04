@@ -16,6 +16,19 @@
     android:orientation="vertical"
     tools:context="com.danielpape.EMOM.SetUpIntervalEMOMActivity">
 
+    <TextView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Which workout today?"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        android:textStyle="bold"
+        tools:text="Which workout today?" />
+
     <android.support.v7.widget.CardView
     android:id="@+id/EMOMCard"
     android:layout_width="match_parent"
@@ -41,10 +54,10 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Interval EMOM Workout"
+                android:layout_marginTop="48dp"
+                android:text="Interval Training EMOM"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                tools:text="EMOM Workout" />
+                tools:text="Interval Training EMOM" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -66,10 +79,12 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:onClick="tapEMOMButton"
                 android:text="Choose Interval Emom"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
@@ -91,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/cardbggradient"
+            android:background="@drawable/cardrepsbggradient"
             android:weightSum="4">
 
 
@@ -102,10 +117,10 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Reps EMOM Workout"
+                android:layout_marginTop="48dp"
+                android:text="Set Reps EMOM"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                tools:text="Reps EMOM Workout" />
+                tools:text="Set Reps EMOM" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -127,9 +142,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="tapRepsEMOMButton"
+                android:layout_gravity="right"
                 android:text="Choose Reps Emom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
@@ -142,6 +158,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardBackgroundColor="@color/CardBG"
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp">
@@ -150,7 +167,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/cardbggradient"
+            android:background="@drawable/cardtabatabggradient"
 
             android:weightSum="4">
 
@@ -162,7 +179,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="48dp"
                 android:text="Tabata Workout"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 tools:text="Tabata Workout" />
@@ -187,9 +204,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="tapTabataButton"
+                android:layout_gravity="right"
                 android:text="Choose Tabata Emom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
