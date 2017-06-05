@@ -35,7 +35,7 @@ public class SetUpTabataWorkoutActivity extends AppCompatActivity {
                 .build());
 
         Intent intent = new Intent(getBaseContext(), TabataActivity.class);
-//        intent.putExtra("workoutLength", timeSlider.getProgress());
+        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
 //        intent.putExtra("roundTime", roundTime);
         startActivity(intent);

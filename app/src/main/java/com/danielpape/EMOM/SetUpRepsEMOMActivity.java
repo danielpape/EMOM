@@ -34,7 +34,7 @@ public class SetUpRepsEMOMActivity extends AppCompatActivity {
                 .build());
 
         Intent intent = new Intent(getBaseContext(), repsEMOMWorkoutActivity.class);
-//        intent.putExtra("workoutLength", timeSlider.getProgress());
+        intent.putExtra("workoutLength", timeSlider.getProgress());
 //        intent.putExtra("restTime", restTime);
 //        intent.putExtra("roundTime", roundTime);
         startActivity(intent);
