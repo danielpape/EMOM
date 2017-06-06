@@ -12,4 +12,5 @@
     <string name="start_workout">Start Workout</string>
     <string name="timer_will_count_you_down_into_each_period_work_when_the_screen_is_green_rest_when_the_screen_is_red">Timer will count you down into each period. Work when the screen is green, rest when the screen is red.</string>
     <string name="workout_length">Workout length</string>
+    <string name="facebook_app_id">1147455498694515</string>
 </resources>

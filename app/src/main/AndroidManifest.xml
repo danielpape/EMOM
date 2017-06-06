@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <provider android:authorities="com.facebook.app.FacebookContentProvider1147455498694515"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true" />
+
     <application
         android:name=".EMOM"
         android:allowBackup="true"
@@ -12,6 +16,7 @@
         android:label="EMOM"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".MainActivityOptions"
             android:label="EMOM"
