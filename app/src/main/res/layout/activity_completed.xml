@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/CardBG"
     tools:context="com.danielpape.EMOM.CompletedActivity">
 
     <TextView
@@ -18,7 +18,7 @@
         android:text="Workout complete"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Display4"
-        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="92sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -22,4 +22,14 @@ public class CompletedActivity extends AppCompatActivity {
 
 
     }
+
+public void twitterButtonTapped(View view){
+    String tweetUrl = "https://twitter.com/intent/tweet?text=test+message";
+    Uri uri = Uri.parse(tweetUrl);
+    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+}
+
+
+
+
 }
